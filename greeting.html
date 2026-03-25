@@ -1,0 +1,25 @@
+<html ng-app="myApp">
+<head>
+<title>Greeting</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+<script>
+var app = angular.module("myApp", []);
+
+app.controller("myCtrl", function($scope)
+{
+    $scope.msg = "Hello Welcome to AngularJS";
+});
+</script>
+
+</head>
+
+<body>
+
+<div ng-controller="myCtrl">
+    {{msg}}
+</div>
+
+</body>
+</html>

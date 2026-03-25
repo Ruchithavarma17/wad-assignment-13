@@ -1,0 +1,35 @@
+<html ng-app="">
+<head>
+<title>Email Validation</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+
+<body>
+
+<form name="myForm">
+
+Enter Email :
+<input type="email" name="email" ng-model="email" required>
+
+<br><br>
+
+<span ng-show="myForm.email.$error.required">
+Email is required
+</span>
+
+<br>
+
+<span ng-show="myForm.email.$error.email">
+Invalid Email
+</span>
+
+<br><br>
+
+<input type="submit" ng-disabled="myForm.$invalid">
+
+</form>
+
+</body>
+</html>
